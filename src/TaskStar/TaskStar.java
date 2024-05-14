@@ -17,10 +17,9 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class TaskStar {
-    Scanner scanner = new Scanner(System.in);
-    String road = scanner.nextLine(); //src/TaskStar/documentNumbers.txt
     public static void main(String[] args) {
-        try(FileReader fileReader = new FileReader("src/TaskStar/documentNumbers.txt");
+        Scanner scanner = new Scanner(System.in);     //src/TaskStar/documentNumbers.txt
+        try(FileReader fileReader = new FileReader(scanner.nextLine());
             FileWriter fileValid = new FileWriter("src/TaskStar/validDocuments.txt");
             FileWriter fileNotValid = new FileWriter("src/TaskStar/notValidDocuments.txt")){
             StringBuilder sb = new StringBuilder("");
